@@ -18,8 +18,8 @@ def main():
             deposit_money()
         elif choice == '3':
             withdraw_money()
-        elif choice == '4':
-            check_balance()
+        #elif choice == '4':
+           # check_balance()
         #elif choice == "5"
         elif choice == '6':
             exit_app()
@@ -41,11 +41,40 @@ def create_account():
     print("Registered Account", account)
 
 def deposit_money():
-    name = input("Enter your Name")
+    name = input("Enter Your Name: ")
     if name not in account:
         print("Name Not Found")
     else:
-        amount = float(input("Amount"))
+        try:
+            amount = float(input("Enter amount to deposit: "))
+            if amount <= 0:
+                print("Invalid Request")
+            else:
+                account[name]["balance"] += amount
+                print(f"Money deposited successfully. New balance is {account[name]["balance"]}")
+        except ValueError:
+            print("Invalid! Please enter valid number.")
+
+
+def withdraw_money():
+    name = input("Enter Your Name: ")
+    if name not in account:
+        print("Account Not Existing")
+    else:
+        try:
+            amount = float(input("Enter amount to withdraw: "))
+            if amount <= 0:
+                print("Invalid amount")
+            elif account[name]["balance"] >= amount:
+                account[name]["balance"] -= amount
+                print(f"Withdrawal successfull, Your balance is {account[name]["balance"]}")
+            else:
+                print("Insufficient funds, please credit your account")
+        except ValueError:
+            print("Invalid request")
+
+
+
 
 
 
