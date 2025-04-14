@@ -18,8 +18,8 @@ def main():
             deposit_money()
         elif choice == '3':
             withdraw_money()
-        #elif choice == '4':
-           # check_balance()
+        elif choice == '4':
+            check_balance()
         #elif choice == "5"
         elif choice == '6':
             exit_app()
@@ -43,7 +43,7 @@ def create_account():
 def deposit_money():
     name = input("Enter Your Name: ")
     if name not in account:
-        print("Name Not Found")
+        print("Account Not Found")
     else:
         try:
             amount = float(input("Enter amount to deposit: "))
@@ -59,7 +59,7 @@ def deposit_money():
 def withdraw_money():
     name = input("Enter Your Name: ")
     if name not in account:
-        print("Account Not Existing")
+        print("Account Not found")
     else:
         try:
             amount = float(input("Enter amount to withdraw: "))
@@ -74,6 +74,17 @@ def withdraw_money():
             print("Invalid request")
 
 
+def check_balance():
+    name = input("Enter your name: ")
+    if name not in account:
+        print("Account not found")
+    else:
+        print(f"Your account balance is {account[name]["balance"]}")
+
+
+def exit_app():
+    print("Thanks for banking with us")
+    exit()
 
 
 
