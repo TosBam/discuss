@@ -87,12 +87,4 @@ def exit_app():
     exit()
 
 
-
-
-
-
-
-
-#print(account)
-
 main()
