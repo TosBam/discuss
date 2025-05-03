@@ -1,0 +1,114 @@
+/* CSS */
+
+/* Global Styling */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #005fa3;
+}
+
+/* Welcome Section */
+header section p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Services Section */
+main > section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+main > section ul {
+    padding-left: 20px;
+}
+
+/* Checkbox Actions */
+main > section label {
+    display: inline-block;
+    margin: 10px 15px;
+    font-size: 1rem;
+}
+
+main > section button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+main > section button:hover {
+    background-color: #1e7e34;
+}
+
+/* Footer Section */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer label {
+    margin-top: 20px;
+    display: block;
+    font-size: 0.9rem;
+}
